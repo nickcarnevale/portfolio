@@ -1,0 +1,53 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.nav-right{
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+.logo img {
+  max-width: 70px;
+  max-height: 50px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+li {
+  cursor: pointer;
+}
+
+.social-media a {
+  margin-right: 1rem;
+  text-decoration: none;
+}
