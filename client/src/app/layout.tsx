@@ -1,10 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import LetterGlitch from "@/components/background/LetterGlitch";
-import Squares from "@/components/background/Squares";
+import TransitionWrapper from "@/components/background/transitions/TransitionWrapper";
 
 export const metadata: Metadata = {
-  title: "Nicholas Carnevale's Portfolio",
+  title: "Nicholas Carnevale",
   description: "Portfolio Site",
 };
 
@@ -16,26 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="m-0 p-0 w-full h-full">
-
         <LetterGlitch
           glitchSpeed={70}
           centerVignette={true}
           outerVignette={true}
           smooth={true}
         >
-          {children}
+          <TransitionWrapper>{children}</TransitionWrapper>
         </LetterGlitch>
-
-        {/* <Squares 
-        speed={0.3} 
-        squareSize={40}
-        direction='diagonal' // up, down, left, right, diagonal
-        borderColor='#e4dcbaff'
-        hoverFillColor='#222'
-        >
-          {children}
-        </Squares > */}
-
       </body>
     </html>
   );
