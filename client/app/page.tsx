@@ -1,18 +1,28 @@
 import TextType from "@/animations/TextType";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="h-full w-full flex flex-col items-center justify-center gap-6 text-white">
       <TextType
-        text={["Nicholas Carnevale"]}     // typing text
-        typingSpeed={60}                  // adjust typing speed
-        pauseDuration={2000}              // pause before deleting or stopping
-        showCursor={true}                 // blinking cursor
+        text={["Enter if you dare."]}
+        typingSpeed={70}
+        pauseDuration={5000}
+        showCursor={true}
         cursorCharacter="|"               
-        className="text-6xl font-bold"    // same styling as your <h1>
-        loop={false}                      // only type once
+        className="text-6xl font-bold"
+        loop={true}
       />
-      {/* <p className="text-xl opacity-90">Full Stack Engineer</p> */}
+      {/* Navigation Button */}
+      <Link
+        href="/landing"
+        className="mt-6 px-6 py-3 bg-white/10 hover:bg-white/20 
+                   rounded-lg text-white border border-white/30
+                   backdrop-blur-sm transition"
+      >
+        Enter
+      </Link>
+
     </main>
   );
 }
