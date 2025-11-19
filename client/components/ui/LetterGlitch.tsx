@@ -218,20 +218,31 @@ const LetterGlitch = ({
   }, [glitchSpeed, smooth]);
 
   return (
-    <div className="relative w-full h-full bg-black overflow-hidden">
-      <canvas ref={canvasRef} className="block w-full h-full" />
-      {outerVignette && (
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,_rgba(0,0,0,0)_60%,_rgba(0,0,0,1)_100%)]"></div>
-      )}
-      {centerVignette && (
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,_rgba(0,0,0,0.8)_0%,_rgba(0,0,0,0)_60%)]"></div>
-      )}
-      {/* CONTENT OVERLAY */}
-      <div className="relative z-10 w-full h-full">
-        {children}
-      </div>
+  <div className="relative w-screen h-screen bg-black overflow-hidden">
+    
+    {/* Canvas Background */}
+    <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" />
+
+    {/* Top fade */}
+    {outerVignette && (
+      <div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-b from-black/40 to-transparent" />
+    )}
+
+    {/* Center radial fade */}
+    {centerVignette && (
+      <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(circle,_rgba(0,0,0,.8)_0%,_rgba(0,0,0,.2)_100%)]" />
+    )}
+
+    {/* CONTENT — always on top */}
+    <div className="relative z-30 w-full h-full flex justify-center items-center">
+      {children}
     </div>
-  );
+
+  </div>
+);
+
 };
 
 export default LetterGlitch;
+
+

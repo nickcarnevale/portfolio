@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import LetterGlitch from "@/components/ui/LetterGlitch";
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Portfolio site",
+  title: "Nicholas Carnevale's Portfolio",
+  description: "Portfolio Site",
 };
 
 export default function RootLayout({
@@ -23,7 +23,6 @@ export default function RootLayout({
         >
           {children}
         </LetterGlitch>
-        {children}
       </body>
     </html>
   );
