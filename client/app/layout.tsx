@@ -16,9 +16,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="m-0 p-0 w-full h-full">
         <LetterGlitch
-          glitchSpeed={50}
+          glitchSpeed={70}
           centerVignette={true}
-          outerVignette={false}
+          outerVignette={true}
           smooth={true}
         >
           {children}

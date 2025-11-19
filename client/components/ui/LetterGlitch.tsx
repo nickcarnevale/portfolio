@@ -225,7 +225,7 @@ const LetterGlitch = ({
 
     {/* Top fade */}
     {outerVignette && (
-      <div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-b from-black/40 to-transparent" />
+      <div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-b from-black/10 to-transparent" />
     )}
 
     {/* Center radial fade */}
