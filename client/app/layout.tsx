@@ -17,16 +17,16 @@ export default function RootLayout({
     <html lang="en">
       <body className="m-0 p-0 w-full h-full">
 
-        {/* <LetterGlitch
+        <LetterGlitch
           glitchSpeed={70}
           centerVignette={true}
           outerVignette={true}
           smooth={true}
         >
           {children}
-        </LetterGlitch> */}
+        </LetterGlitch>
 
-        <Squares 
+        {/* <Squares 
         speed={0.3} 
         squareSize={40}
         direction='diagonal' // up, down, left, right, diagonal
@@ -34,7 +34,7 @@ export default function RootLayout({
         hoverFillColor='#222'
         >
           {children}
-        </Squares >
+        </Squares > */}
 
       </body>
     </html>
